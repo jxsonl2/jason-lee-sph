@@ -17,5 +17,9 @@ for x in url_array:
   try:
     response = requests.get(x)
     print(response.status_code)
+    response_code_result.append(response)
   except requests.exceptions.MissingSchema:
     print("error: Invalid URL") 
+    response_code_result.append("requests.exceptions.MissingSchema")
+
+print("result array: ", response_code_result)
