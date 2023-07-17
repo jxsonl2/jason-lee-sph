@@ -17,7 +17,7 @@ for x in url_array:
   try:
     response = requests.get(x)
     print(response.status_code)
-    response_code_result.append(response)
+    response_code_result.append(response.status_code)
   except requests.exceptions.MissingSchema:
     print("error: Invalid URL") 
     response_code_result.append("requests.exceptions.MissingSchema")
@@ -25,4 +25,5 @@ for x in url_array:
 ## Append result column to existing dataframe 
 df['response'] = response_code_result
 
-print(df)
+## "export" Datafram as CSV
+df.to_csv("result.csv")

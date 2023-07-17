@@ -21,3 +21,4 @@ CSV column error (space between comma): https://www.geeksforgeeks.org/how-to-fix
 How to loop in: https://www.w3schools.com/python/python_for_loops.asp
 How to handle errors in: https://stackoverflow.com/questions/16511337/correct-way-to-try-except-using-python-requests-module
 Add elements in to array: https://stackoverflow.com/questions/22740512/store-a-value-in-an-array-inside-one-for-loop
+Array to new column in dataframes : https://www.geeksforgeeks.org/adding-new-column-to-existing-dataframe-in-pandas/
