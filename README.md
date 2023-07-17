@@ -6,10 +6,10 @@ Test on GCP Cloud Run
 Error handling? 
 
 Using a programming language of your choice, implement a long-running process that:
-• Accepts a csv file containing a list of up to 1000 urls with names at startup. - csv format must have no space between columns
-• The process should pull all these urls every 10 minutes to check their HTTP status.
+• DONE - Accepts a csv file containing a list of up to 1000 urls with names at startup. - csv format must have no space between columns
+• Cron - The process should pull all these urls every 10 minutes to check their HTTP status.
 • The process should also bind a local port, to provide a summary of monitoring status in the past hour in any suitable format.
-• Containerise the application
+• Containerise the application - check python --version
 A sample of the CV file might include:
 
 Deployment Task
@@ -22,3 +22,5 @@ How to loop in: https://www.w3schools.com/python/python_for_loops.asp
 How to handle errors in: https://stackoverflow.com/questions/16511337/correct-way-to-try-except-using-python-requests-module
 Add elements in to array: https://stackoverflow.com/questions/22740512/store-a-value-in-an-array-inside-one-for-loop
 Array to new column in dataframes : https://www.geeksforgeeks.org/adding-new-column-to-existing-dataframe-in-pandas/
+
+docker build --platform linux/amd64 .
