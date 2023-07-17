@@ -1,18 +1,21 @@
 ## For HTTP requerst
-# import requests
-
+import requests
 ## For CSV column to array
 import pandas as pd
  
+## "import" the CSV file
 df = pd.read_csv('sample-url.csv')
 
-# url = "https://www.google.com"
-
+## Array for URL column from CSV file
 url_array = df['url']
 
-print(url_array)
+## Array to store response code 
+response_code_result = []
 
-# ## HTTP request
-# response = requests.get(url)
- 
-# print(response.status_code)
+## Loop through array and http request test
+for x in url_array:
+  try:
+    response = requests.get(x)
+    print(response.status_code)
+  except requests.exceptions.MissingSchema:
+    print("error: Invalid URL") 
