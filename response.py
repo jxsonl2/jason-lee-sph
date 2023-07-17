@@ -12,7 +12,7 @@ url_array = df['url']
 ## Array to store response code 
 response_code_result = []
 
-## Loop through array and http request test
+## Loop through array and http request
 for x in url_array:
   try:
     response = requests.get(x)
@@ -22,4 +22,7 @@ for x in url_array:
     print("error: Invalid URL") 
     response_code_result.append("requests.exceptions.MissingSchema")
 
-print("result array: ", response_code_result)
+## Append result column to existing dataframe 
+df['response'] = response_code_result
+
+print(df)
