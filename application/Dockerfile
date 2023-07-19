@@ -1,7 +1,9 @@
 FROM python:3.9.6-slim-buster
-COPY requirements.txt requirements.txt
+COPY . .
+RUN chmod 0644 crontab
+RUN chmod 0744 response.py
 RUN pip install --upgrade pip
 RUN pip3 install -r requirements.txt
-COPY response.py response.py
-COPY sample-url.csv sample-url.csv
-CMD [ "python3", "response.py" ]
+RUN apt-get update && apt-get install -y cron
+RUN crontab crontab
+CMD ["cron", "-f"]

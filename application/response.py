@@ -2,8 +2,9 @@ import requests
 import pandas as pd
 from datetime import datetime
 
+
 ## "import" the CSV file
-df = pd.read_csv('sample-url.csv')
+df = pd.read_csv('/sample-url.csv')
 
 ## Array for URL column from CSV file
 url_array = df['url']
