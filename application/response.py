@@ -1,8 +1,7 @@
-## For HTTP requerst
 import requests
-## For CSV column to array
 import pandas as pd
- 
+from datetime import datetime
+
 ## "import" the CSV file
 df = pd.read_csv('sample-url.csv')
 
@@ -25,5 +24,7 @@ for x in url_array:
 ## Append result column to existing dataframe 
 df['response'] = response_code_result
 
-## "export" Datafram as CSV
-df.to_csv("result.csv")
+## "export" Dataframe as CSV
+filename = (datetime.today().strftime('%Y%m%d-%H%M') + "-result.csv")
+print(filename)
+df.to_csv(filename)

@@ -8,8 +8,9 @@ Error handling?
 Using a programming language of your choice, implement a long-running process that:
 • DONE - Accepts a csv file containing a list of up to 1000 urls with names at startup. - csv format must have no space between columns
 • Cron - The process should pull all these urls every 10 minutes to check their HTTP status.
-• The process should also bind a local port, to provide a summary of monitoring status in the past hour in any suitable format.
-• Containerise the application - check python --version
+• ? The process should also bind a local port, to provide a summary of monitoring status in the past hour in any suitable format.
+• DONE* - Containerise the application - check python --version - * to do : crontab, check docker run keeps running.
+
 A sample of the CV file might include:
 
 Deployment Task
@@ -24,3 +25,4 @@ Add elements in to array: https://stackoverflow.com/questions/22740512/store-a-v
 Array to new column in dataframes : https://www.geeksforgeeks.org/adding-new-column-to-existing-dataframe-in-pandas/
 
 docker build --platform linux/amd64 .
+
